@@ -11,6 +11,11 @@ public class movePlayer : MonoBehaviour
     public float moveSpeed = 10f;
     public int jumpstrength = 6;
     public int deathZone = -15;
+
+    public SpriteRenderer sprend;
+    public Sprite playerLeft;
+    public Sprite playerRight;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,11 +29,13 @@ public class movePlayer : MonoBehaviour
         if(Input.GetKey(KeyCode.A))
         {
             Player.transform.Translate(Vector3.left  * moveSpeed * Time.deltaTime);
+            sprend.sprite = playerLeft;
         }
 
         if (Input.GetKey(KeyCode.D))
         {
             Player.transform.Translate(Vector3.right * moveSpeed * Time.deltaTime);
+            sprend.sprite = playerRight;
         }
 
         //JUMP!!!
