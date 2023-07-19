@@ -9,8 +9,10 @@ public class LogicManager : MonoBehaviour
     public GameObject gun;
     public GameObject bullet;
 
-    public int fWMoveSpeed = 12;
-    public int sHMoveSpeed = 8;
+    public Vector3 bulletOffset = new Vector3(0.4f, 0, 0);
+
+    public int cMoveSpeed = 12;
+    public int aMoveSpeed = 8;
     public int aHitStr;
     public int cHitStr;
 
@@ -23,17 +25,15 @@ public class LogicManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Moves fS (fast weal)
-        child.transform.Translate(Vector3.left * fWMoveSpeed * Time.deltaTime);
+        //Moves fS (fast weak)
+        child.transform.Translate(Vector3.left * aMoveSpeed * Time.deltaTime);
         //Moves sH (slow hard)
-        adult.transform.Translate(Vector3.left * sHMoveSpeed * Time.deltaTime);
+        adult.transform.Translate(Vector3.left * cMoveSpeed * Time.deltaTime);
 
         //spawns a bullet :D
         if (Input.GetMouseButtonDown(0))
         {
-            Instantiate(bullet, gun.transform.position, bullet.transform.rotation);
-        }
-
-        if (bullet //bullets go off screen and get deletus'd
+            Instantiate(bullet, gun.transform.position + bulletOffset, bullet.transform.rotation);
+        }         
     }
 }
