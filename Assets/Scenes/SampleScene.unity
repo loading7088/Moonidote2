@@ -311,8 +311,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   child: {fileID: 3709890554392425721, guid: 5eff2f68ac5ea1c44bbe1de95f4f2d47, type: 3}
   adult: {fileID: 7225055024551990142, guid: bb9f721d533277347acfdf1122d75b76, type: 3}
+  player: {fileID: 1697689626}
   gun: {fileID: 1872542384}
   bullet: {fileID: 4859175955137456534, guid: 0dbe032e104eb994881d2f54cdc4aef2, type: 3}
+  gunRend: {fileID: 1872542386}
+  playerRend: {fileID: 1697689627}
+  gunFire: {fileID: 21300000, guid: 9948284b9b7907e44a19d7324b8d6721, type: 3}
+  playerGun: {fileID: 21300000, guid: 4b5c68b6d579b024a8b9a18e8d936de8, type: 3}
   bulletOffset: {x: 0.4, y: 0.12, z: 0}
   cMoveSpeed: 12
   aMoveSpeed: 8
